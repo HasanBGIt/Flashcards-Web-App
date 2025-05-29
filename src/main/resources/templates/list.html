@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Flash Cards</title>
+    <link rel="stylesheet" th:href="@{/css/styleList.css}"/>
+    <link rel="icon" th:href="@{/images/HassanLogo.png}">
+</head>
+<body>
+    <div class="container">
+        <div th:if="${#lists.isEmpty(cards)}">
+            <p id="Not">No cards found.<a th:href="@{/cards/add}" id="NotA">Add a new card</a></p>
+        </div>
+
+        <div th:each="card : ${cards}" class="card">
+            <div class="face1">
+                <div class="content">
+                    <h3 th:text="${card.name}">Card Name</h3>
+                </div>
+            </div>
+            
+            <div class="face2">
+                <div class="content">
+                    <p th:text="${card.description}">Card description goes here</p>
+                <div class="button-group">
+                    <form th:action="@{'/cards/delete/' + ${card.id}}" method="post" style="margin: 0;">
+                        <input type="hidden" name="_method" value="delete" />
+                        <button type="submit" class="delete-btn">Delete the Card</button>
+                    </form>
+                    <a th:href="@{'/cards/update/' + ${card.id}}" class="update-btn">Update the Card</a>
+                    <a th:href="@{/cards/add}" class="add-btn">Add a new Card</a>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+        <footer class="footer">
+            <a href="https://github.com/HsnBGit" class="social-icon">
+                <img th:src="@{/images/211904_social_github_icon.png}"/>
+            </a>
+            <a href="https://www.linkedin.com/in/hsn-hbb/" class="social-icon">
+
+                <img th:src="@{/images/104493_linkedin_icon.png}"/>
+            </a>
+            <a href="https://hsnbgit.github.io/Portfolio/" class="social-icon">
+                <img th:src="@{/images/326663_language_web_icon.png}"/>
+             </a>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/styleLogin.css}">
+    <link rel="icon" th:href="@{/images/HassanLogo.png}"/>
+
+</head>
+    <body>
+        <div class="main">
+            <div class="form-box">
+                <form th:action="@{/login}" th:object="${user}" method="post">
+                    <h2>Login or Sign Up</h2>
+
+                    <!-- Username -->
+                    <input type="text" th:field="*{username}" placeholder="Username">
+                    <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error"></div>
+
+                    <!-- Email -->
+                    <input type="email" th:field="*{email}" placeholder="Email">
+                    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
+
+                    <!-- Password -->
+                    <input type="password" th:field="*{password}" placeholder="Password">
+                    <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
+
+                    <button type="submit">Log In / Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <a href="https://github.com/HsnBGit" class="social-icon">
+                <img th:src="@{/images/211904_social_github_icon.png}"/>
+            </a>
+            <a href="https://www.linkedin.com/in/hsn-hbb/" class="social-icon">
+
+                <img th:src="@{/images/104493_linkedin_icon.png}"/>
+            </a>
+            <a href="https://hsnbgit.github.io/Portfolio/" class="social-icon">
+                <img th:src="@{/images/326663_language_web_icon.png}"/>
+             </a>
+        </footer>
+    </body>
+</html>

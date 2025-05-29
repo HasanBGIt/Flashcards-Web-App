@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  margin: 0;
+  padding: 2rem;
+  color: #2d3748;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c5282;
+}
+
+
+.fs-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(66, 66, 66, 0.1);
+}
+
+
+.fs-field {
+  margin-bottom: 1.5rem;
+}
+
+.fs-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.fs-input,
+.fs-textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.fs-input:focus,
+.fs-textarea:focus {
+  border-color: #3182ce;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+
+.fs-textarea {
+  resize: vertical;
+}
+
+
+.error {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+
+.fs-button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.fs-button {
+  background-color: #3182ce;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fs-button:hover {
+  background-color: #2b6cb0;
+}
+
+.fs-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.6);
+}
+
+#Cancel{
+  background-color: grey;
+  text-decoration:none;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem; 
+  color: white;
+  text-align: center;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f1f1f1;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer .social-icon {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer .social-icon img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 0 10px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Card</title>
+    <link rel="stylesheet" th:href="@{/css/styleAdd.css}" />
+    <link rel="icon" href="./images/HassanLogo.png">
+</head>
+
+<body>
+    <h1>Add a New Card</h1>
+
+   <form th:action="@{/cards/add}" th:object="${card}" method="post" class="fs-form">
+    
+      <!-- Card Name -->
+      <div class="fs-field">
+        <label class="fs-label">Card Name</label>
+        <input th:field="*{name}" placeholder="Enter card name" class="fs-input"/>
+        <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></div>
+      </div>
+
+      <!-- Category -->
+      <div class="fs-field">
+        <label class="fs-label">Category</label>
+        <input th:field="*{category}" placeholder="Enter category" class="fs-input" />
+        <div th:if="${#fields.hasErrors('category')}" th:errors="*{category}" class="error"></div>
+      </div>
+
+      <!-- Description -->
+      <div class="fs-field">
+        <label class="fs-label">Description</label>
+        <textarea th:field="*{description}" placeholder="Enter description" rows="5" class="fs-textarea"></textarea>
+        <div th:if="${#fields.hasErrors('description')}" th:errors="*{description}" class="error"></div>
+      </div>
+
+
+      <div class="fs-button-group">
+        <button type="submit" class="fs-button">Save Card</button>
+        <a th:href="@{/cards/list}" class="fs-button" id="Cancel">Cancel</a>
+      </div>
+    
+    </form>
+        <footer class="footer">
+            <a href="https://github.com/HsnBGit" class="social-icon">
+                <img th:src="@{/images/211904_social_github_icon.png}"/>
+            </a>
+            <a href="https://www.linkedin.com/in/hsn-hbb/" class="social-icon">
+
+                <img th:src="@{/images/104493_linkedin_icon.png}"/>
+            </a>
+            <a href="https://hsnbgit.github.io/Portfolio/" class="social-icon">
+                <img th:src="@{/images/326663_language_web_icon.png}"/>
+             </a>
+        </footer>
+  </body>
+</html>

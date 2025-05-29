@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.face1 .content h3 {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.face2 .content {
+    max-height: 150px; 
+    overflow-y: auto;  
+}
+
+.face2 .content p {
+    font-size: 1rem;
+    color: gray;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-btn, .update-btn, .delete-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.delete-btn:hover {
+    background-color: rgb(173, 11, 11);
+}
+
+.add-btn:hover{
+    background-color: #8da947;
+}
+.update-btn:hover{
+    background-color: #4e5d28;
+}
+
+#Not{
+    color: white   ;
+}
+#NotA{
+    color: white   ;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f1f1f1;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer .social-icon {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer .social-icon img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 0 10px;
+}
