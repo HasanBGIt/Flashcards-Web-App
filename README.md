@@ -1,10 +1,10 @@
-# 🧠 My FlashStudy App
+# My FlashStudy App
 
 A lightweight Spring Boot-based web application for managing flashcards. Users can register, log in, and create personalized flashcards to aid in study and review. The app also exposes a RESTful API for programmatic access.
 
 ---
 
-## 🌟 Features
+## Features
 
 - User registration & login (with session-based authentication)
 - Create, read, update, and delete flashcards
@@ -16,35 +16,35 @@ A lightweight Spring Boot-based web application for managing flashcards. Users c
 
 ---
 
-## 🖼️ Screenshots
+##  Screenshots
 
-### 📋 Login Page
+### Login Page
 ![Login](./sign.png)
 
-### ➕ Add Flashcard
+### Add Flashcard
 ![Add](./add.png)
 
-### 📑 Flashcard List
+### Flashcard List
 ![List](./list.png)
 
 > Place the above images in a `images/` folder inside the repository.
 
 ---
 
-## 🔁 REST API Endpoints
+## REST API Endpoints
 
 Base URL: `/rest`
 
-### 📄 Get All Cards
+### Get All Cards
 GET /rest/cards/all
 
-### 👤 Get All Users
+### Get All Users
 GET /rest/users/all
 
-### 🗂️ Get Cards by User ID
+### Get Cards by User ID
 GET /rest/user/{id}
 
-### ➕ Create a New Card
+### Create a New Card
 POST /rest/cards/create  
 Content-Type: application/json
 
@@ -59,12 +59,12 @@ Content-Type: application/json
 }
 ```
 
-### ❌ Delete a Card
+### Delete a Card
 DELETE /rest/cards/delete/{id}
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ### Prerequisites
 
@@ -84,7 +84,7 @@ JDBC URL: `jdbc:h2:file:./database/testdb`
 
 ---
 
-## 🛡️ Security
+## Security
 
 - Basic user authentication using `BCryptPasswordEncoder`
 - Users are session-authenticated via a login form
@@ -92,7 +92,7 @@ JDBC URL: `jdbc:h2:file:./database/testdb`
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - Spring Boot
 - Spring Data JPA
@@ -102,7 +102,7 @@ JDBC URL: `jdbc:h2:file:./database/testdb`
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src
@@ -120,12 +120,12 @@ src
 
 ---
 
-## 🤝 Contributions
+## Contributions
 
 Feel free to fork and submit PRs to improve features, fix bugs, or add enhancements!
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
